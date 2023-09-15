@@ -1,0 +1,61 @@
+<!-- LoginForm.astro -->
+---
+/*import { client } from "@app/client";*/
+---
+
+<form
+  class="max-w-sm mx-auto mt-8 p-6 rounded-lg shadow-lg bg-white"
+  
+>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+      Correo Electrónico
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="email"
+      type="email"
+      placeholder="Correo Electrónico"
+      required
+    />
+  </div>
+  <div class="mb-6">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+      Contraseña
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="password"
+      type="password"
+      placeholder="Contraseña"
+      required
+    />
+  </div>
+  <div class="flex items-center justify-between">
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      type="submit"
+    >
+      Iniciar Sesión
+    </button>
+  </div>
+</form>
+
+<script>
+ /* async function submitForm(event) {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    // Aquí puedes enviar una solicitud al servidor para autenticar al usuario
+    // usando los valores de email y password.
+
+    try {
+      const response = await client.login(email, password);
+      // Maneja la respuesta del servidor aquí, por ejemplo, redirecciona al dashboard.
+    } catch (error) {
+      // Maneja errores de autenticación aquí, por ejemplo, muestra un mensaje de error.
+      console.error("Error de inicio de sesión:", error);
+    }
+  }*/
+</script>
