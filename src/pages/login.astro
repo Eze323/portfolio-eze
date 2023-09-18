@@ -3,8 +3,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LoginForm from '../components/LoginForm.astro';
 ---
 
-<BaseLayout title="Login | A. Ezequiel IRrace" description="Inicio de sesion o registro">
-    
-    <LoginForm/>
 
+<BaseLayout title="Login | A. Ezequiel IRrace" description="Inicio de sesion o registro">
+
+
+
+		<div class="center">
+
+            <LoginForm/>
+        </div>
+		
+
+        
+	
 </BaseLayout>
+
+<style>
+.center{
+    
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+    .formLogin{
+        aspect-ratio: 5 / 4;
+		object-fit: cover;
+		object-position: top;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+    }
+
+	
+	/* ====================================================== */
+
+
+
+
+</style>
+
