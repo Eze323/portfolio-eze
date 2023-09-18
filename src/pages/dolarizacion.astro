@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Dolarización | A. Ezequiel Irace" description="Dolarización | A. Ezequiel Irace">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Dolarización"
+				tagline="Dicen que la dolarización destruiría los sueldos."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="https://fotos.perfil.com/2023/09/13/trim/987/555/dolarizacion-1652787.jpg"
+					alt="La dolarización"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Explicación</h2>
+				<div class="content">
+					<p>
+						El riesgo más importante que tiene la economía Argentina es perder el valor de nuestra moneda. 
+                        Que dicho sea de paso ya esta más devaluada que promesa de Massa. Por lo tanto si dolarizamos, 
+                         y vamos a competencia de monedas... que pasa con ese riesgo? cha chan cha chan... desaparece.
+
+					</p>
+					<p>
+						Esto hace que el ciudadano vuelva a confiar y pasas a un régimen de credibilidad, por ende genera una estabilización. 
+                        Esta misma estabilización hace que tambien genere una baja en el riesgo de tasa de interes y aparezcan los creditos
+					</p>
+					<p>
+						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
+						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
+						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
+						pretium fusce.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>Corporis voluptates tenetur laudantium.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
